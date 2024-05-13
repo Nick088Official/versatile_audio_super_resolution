@@ -78,16 +78,15 @@ optional arguments:
 - UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/versatile_audio_super_resolution/blob/main/Audio_SR_WEB_UI.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
-- NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/versatile_audio_super_resolution/blob/main/Audio_SR_WEB_UI.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+
+- NO UI (WORK IN PROGRESS)
 
 ### Hugging Face Space
 [Hugging Face Space🤗](https://huggingface.co/spaces/Nick088/Audio-SR) 
 
 ### Kaggle
-- UI
-- NO UI
+- UI (WORK IN PROGRESS)
+- NO UI (WORK IN PROGRESS)
 
 ## Change Log
 - 2024-05-10: Added Gradio Demo
