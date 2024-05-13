@@ -77,7 +77,7 @@ parser.add_argument(
     type=int,
     required=False,
     default=42,
-    help="Change this value (any integer number) will lead to a different generation result.",
+    help="Changing this value (any integer number) will lead to a different generation result.",
 )
 
 parser.add_argument(
