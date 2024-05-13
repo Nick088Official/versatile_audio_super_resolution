@@ -11,11 +11,8 @@ Share your thoughts/samples/issues in our discord channel: https://discord.gg/HW
 
 ![Image Description](https://github.com/haoheliu/versatile_audio_super_resolution/blob/main/visualization.png?raw=true)
 
-## Change Log
-- 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).  
-- 2023-09-16: Fix DC shift issue. Fix duration padding bug. Update default DDIM steps to 50.
-
-## Gradio Demo
+## Locally
+### Gradio (WEB UI) Demo
 
 To run the Gradio demo locally:
 
@@ -23,9 +20,9 @@ To run the Gradio demo locally:
 2. Run the app: `python app.py`
 3. Open the URL displayed to view the demo
 
-## Commandline Usage
+### Commandline (NO UI) Usage
 
-## Installation
+#### Installation
 ```shell
 # Optional
 conda create -n audiosr python=3.9; conda activate audiosr
@@ -35,7 +32,7 @@ pip3 install audiosr==0.0.7
 # pip3 install git+https://github.com/haoheliu/versatile_audio_super_resolution.git
 ```
 
-## Usage
+#### Usage
 
 Process a list of files. The result will be saved at ./output by default.
 
@@ -75,11 +72,31 @@ optional arguments:
   --suffix SUFFIX       Suffix for the output file
 ```
 
+## Online
+
+### Google Colabs
+- UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/versatile_audio_super_resolution/blob/main/Audio_SR_WEB_UI.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+- NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/versatile_audio_super_resolution/blob/main/Audio_SR_WEB_UI.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+### Hugging Face Space
+[Hugging Face Space🤗](https://huggingface.co/spaces/Nick088/Audio-SR) 
+
+### Kaggle
+- UI
+- NO UI
+
+## Change Log
+- 2024-05-10: Added Gradio Demo
+- 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).  
+- 2023-09-16: Fix DC shift issue. Fix duration padding bug. Update default DDIM steps to 50.
 
 ## TODO
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/haoheliuP)
 
-- [ ] Add gradio demo.
 - [ ] Optimize the inference speed.
 
 ## Cite our work
