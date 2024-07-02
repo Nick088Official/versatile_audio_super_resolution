@@ -72,6 +72,8 @@ optional arguments:
   --suffix SUFFIX       Suffix for the output file
 ```
 
+If you'd desire to use a random seed, you can add `$(python -c "import random; print(random.randint(1, 2**32-1))")` to the `--seed` argument, like: `--seed $(python -c "import random; print(random.randint(1, 2**32-1))")`
+
 ## Online
 
 ### Google Colabs
@@ -91,7 +93,7 @@ optional arguments:
 - NO UI (WORK IN PROGRESS)
 
 ## Change Log
-- 2024-07-02: Added NO UI Google Colab & Set Random seed when input seed value is 0.
+- 2024-07-02: Added NO UI Google Colab & Set Random seed when input seed value is 0 (not to the package, written ways in the readme, and added it to the online ports and gradio demo).
 - 2024-05-10: Added Gradio Demo.
 - 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).  
 - 2023-09-16: Fix DC shift issue. Fix duration padding bug. Update default DDIM steps to 50.
