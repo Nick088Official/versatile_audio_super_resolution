@@ -4,6 +4,11 @@ from audiosr import super_resolution, build_model
 def inference(audio_file, model_name, guidance_scale, ddim_steps, seed):
     audiosr = build_model(model_name=model_name)
     
+    # set random seed when seed input value is 0
+    if seed == 0:
+        import random
+        seed = random.randint(1, 2**32-1)
+    
     waveform = super_resolution(
         audiosr,
         audio_file,
@@ -21,7 +26,7 @@ iface = gr.Interface(
         gr.Dropdown(["basic", "speech"], value="basic", label="Model"),
         gr.Slider(1, 10, value=3.5, step=0.1, label="Guidance Scale", info="Guidance scale (Large => better quality and relavancy to text; Small => better diversity)"),  
         gr.Slider(1, 100, value=50, step=1, label="DDIM Steps", info="The sampling step for DDIM"),
-        gr.Number(value=42, precision=0, label="Seed", info="Changing this value (any integer number) will lead to a different generation result.")
+        gr.Number(value=42, precision=0, label="Seed", info="Changing this value (any integer number) will lead to a different generation result, put 0 for a random one.")
     ],
     outputs=gr.Audio(type="numpy", label="Output Audio"),
     title="AudioSR",
