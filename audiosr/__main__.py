@@ -4,6 +4,7 @@ import torch
 import logging
 from audiosr import super_resolution, build_model, save_wave, get_time, read_list
 import argparse
+import random
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 matplotlib_logger = logging.getLogger('matplotlib')
@@ -112,6 +113,9 @@ else:
 for input_file in files_todo:
     name = os.path.splitext(os.path.basename(input_file))[0] + args.suffix
 
+if random_seed == 0:
+    random_seed = random.randint(1, 2**32-1) # set random seed when seed input value is 0
+    
     waveform = super_resolution(
         audiosr,
         input_file,
