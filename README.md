@@ -26,10 +26,10 @@ To run the Gradio demo locally:
 ```shell
 # Optional
 conda create -n audiosr python=3.9; conda activate audiosr
-# Install AudioLDM
+# Install AudioLDM (NO UI ONLY)
 pip3 install audiosr
-# or
-# pip3 install git+https://github.com/Nick088Official/versatile_audio_super_resolution.git
+# or for using also the gradio demo you can do the following
+pip3 install git+https://github.com/Nick088Official/versatile_audio_super_resolution.git
 ```
 
 #### Usage
@@ -68,7 +68,7 @@ optional arguments:
                         The sampling step for DDIM
   -gs GUIDANCE_SCALE, --guidance_scale GUIDANCE_SCALE
                         Guidance scale (Large => better quality and relavancy to text; Small => better diversity)
-  --seed SEED           Change this value (any integer number) will lead to a different generation result.
+  --seed SEED           Change this value (any integer number) will lead to a different generation result, also if you set it to 0, it will use a random one.
   --suffix SUFFIX       Suffix for the output file
 ```
 
@@ -79,7 +79,9 @@ optional arguments:
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-- NO UI (WORK IN PROGRESS)
+- NO UI <a target="_blank" href="https://colab.research.google.com/github/Nick088Official/versatile_audio_super_resolution/blob/main/Audio_SR_NO_UI.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 ### Hugging Face Space
 [Hugging Face Space🤗](https://huggingface.co/spaces/Nick088/Audio-SR) 
@@ -89,7 +91,8 @@ optional arguments:
 - NO UI (WORK IN PROGRESS)
 
 ## Change Log
-- 2024-05-10: Added Gradio Demo
+- 2024-07-02: Added NO UI Google Colab & Set Random seed when input seed value is 0.
+- 2024-05-10: Added Gradio Demo.
 - 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).  
 - 2023-09-16: Fix DC shift issue. Fix duration padding bug. Update default DDIM steps to 50.
 
