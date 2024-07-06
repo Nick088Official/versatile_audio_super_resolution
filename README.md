@@ -28,8 +28,10 @@ To run the Gradio demo locally:
 conda create -n audiosr python=3.9; conda activate audiosr
 # Install AudioLDM (NO UI ONLY)
 pip3 install audiosr
-# or for using also the gradio demo you can do the following
+# or (NO UI ONLY)
 pip3 install git+https://github.com/Nick088Official/versatile_audio_super_resolution.git
+# For using also the Gradio Web UI do:
+git clone https://github.com/Nick088Official/versatile_audio_super_resolution.git
 ```
 
 #### Usage
